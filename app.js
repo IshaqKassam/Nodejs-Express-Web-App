@@ -1,4 +1,5 @@
 const express = require('express')
+const chalk = require('chalk') //used to color texts - useful in console logging colored messages
 
 const app = express()
 
@@ -8,5 +9,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log("App running")
+    console.log("Listening on Port" + chalk.green(' 3000'))
 })
