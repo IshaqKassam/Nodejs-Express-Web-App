@@ -4,6 +4,8 @@ const chalk = require('chalk') //used to color texts - useful in console logging
 const morgan = require('morgan')
 const path = require('path')
 
+const PORT = process.env.PORT || 3000
+
 const app = express()
 
 app.use(morgan('tiny'))
@@ -13,6 +15,6 @@ app.get('/', (req, res) => {
     res.send("hello from my app")
 })
 
-app.listen(3000, () => {
-    console.log(`Listening on Port ${chalk.green(' 3000')}`)
-})
+app.listen(PORT, () => {
+    console.log(`Listening on Port ${chalk.green(PORT)}`)
+})  
